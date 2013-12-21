@@ -3,20 +3,45 @@ function InteractiveMap:__init()
     self.lastTime = os.time()
 
     Events:Subscribe("PostTick", self, self.PostTick)
+    Events:Subscribe("PlayerChat", self, self.PlayerChat)
 end
 
 function InteractiveMap:PostTick(args)
     if os.difftime(os.time(), self.lastTime) >= 1 then
-        file = io.open("intermap.txt", "w");
-        out = ""
-        for player in Server:GetPlayers() do
-            local playerPos = player:GetPosition()
-            out = out.."\n"..player:GetName()..","..playerPos.x..","..playerPos.z
-        end
+        self:WritePositions()
+        self:ChatIn()
+    end
+end
+
+function InteractiveMap:PlayerChat(args)
+    if args.text:sub(1, 1) ~= "/" then
+        file = io.open("chatout.txt", "a")
+        out = "\n"..os.time()..","..args.player:GetName()..","..args.text
         file:write(out)
         file:close()
-        self.lastTime = os.time()
     end
+end
+
+function InteractiveMap:WritePositions()
+    file = io.open("intermap.txt", "w");
+    out = ""
+    for player in Server:GetPlayers() do
+        local playerPos = player:GetPosition()
+        out = out.."\n"..player:GetName()..","..playerPos.x..","..playerPos.z
+    end
+    file:write(out)
+    file:close()
+    self.lastTime = os.time()
+end
+
+function InteractiveMap:ChatIn()
+    for line in io.lines("chatin.txt") do
+        line = string.gsub(line, "\n", "");
+        local time, name, msg = line:match("([^,]+),([^,]+),([^,]+)")
+        Chat:Broadcast("WEB::"..name..": "..msg, Color(255, 255, 255))
+    end
+    file = io.open("chatin.txt", "w+")
+    file:close()
 end
 
 im = InteractiveMap()

@@ -2,8 +2,9 @@
 
 $pathPlayers = 	"G:\\Spill\\Steam\\steamapps\\common\\Just Cause 2 - Multiplayer Dedicated Server\\scripts\\intermap\\intermap.txt";
 $pathTps = 		"G:\\Spill\\Steam\\steamapps\\common\\Just Cause 2 - Multiplayer Dedicated Server\\scripts\\freeroam\\spawns.txt";
+$pathChat = 	"G:\\Spill\\Steam\\steamapps\\common\\Just Cause 2 - Multiplayer Dedicated Server\\scripts\\intermap\\chatout.txt";
 
-$array = array("players" => array(), "tps" => array());
+$array = array("players" => array(), "tps" => array(), "chat" => array());
 
 $handle = fopen($pathPlayers, "r");
 if($handle){
@@ -31,6 +32,16 @@ if($handle){
 }
 else{
 	echo "Error";
+}
+
+$file = file($pathChat);
+for($i = count($file)-36; $i < count($file); $i++){
+	$line = $file[$i];
+	$line = str_replace("\r\n","",$line);
+	if(!empty($line)){
+		$exp = explode(",", $line);
+		$array["chat"][] = array("time" => $exp[0], "name" => $exp[1], "msg" => $exp[2]);
+	}
 }
 
 echo json_encode($array);

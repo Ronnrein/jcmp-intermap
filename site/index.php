@@ -6,6 +6,14 @@
 		#canvas{
 			background-image:url("map.jpg");
 		}
+		#chat{
+			height:700px;
+			border:1px solid;
+		}
+		#chat p{
+			margin:0px;
+			padding:0px;
+		}
 	</style>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -33,6 +41,10 @@
 					});
 					$.each(data.players, function(i, user){
 						renderPlayer(user.name, user.x, user.y);
+					});
+					$("#chat").empty();
+					$.each(data.chat, function(i, msg){
+						renderChat(msg.time, msg.name, msg.msg);
 					});
 				});
 			}
@@ -64,6 +76,30 @@
 				ctx.fillText(name, x, y);
 			}
 
+			function addChat(){
+				if($("#name").val() && $("#msg").val()){
+					$.post("newchat.php", {name: $("#name").val(), msg: $("#msg").val()});
+					$("#msg").val("");
+				}
+				else{
+					alert("Fyll ut både navn og melding");
+				}
+			}
+
+			$("#send").click(function(){
+				addChat();
+			});
+
+			$("#msg").keypress(function(e){
+				if(e.which == 13){
+					addChat();
+				}
+			});
+
+			function renderChat(time, name, msg){
+				$("#chat").append("<p>"+name+": "+msg+"</p>");
+			}
+
 			function convertCoord(coord){
 				return Math.floor(coordsMaxNew * (parseFloat(coord)+coordsMaxOld/2) / coordsMaxOld);
 			}
@@ -74,6 +110,13 @@
 	</script>
 </head>
 <body>
-	<canvas id="canvas" width="800" height="800"></canvas>
+	<table><tr><td>
+		<canvas id="canvas" width="800" height="800"></canvas>
+	</td><td>
+		Nick: <input type="text" id="name" /><br />
+		<div id="chat"></div><br >
+		<input type="text" id="msg" />
+		<button id="send">Send</button>
+	</td></tr></table>
 </body>
 </html>
