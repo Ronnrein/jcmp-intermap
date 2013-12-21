@@ -35,9 +35,6 @@
 1387648738,Ronnrein,spam
 1387648739,Ronnrein,spam
 1387648740,Ronnrein,spam
-1387648742,Ronnrein,est
-
-1387649627,speedy,hva er det test greiane for
 1387649643,Ronnrein,du faar se snart
 1387649820,Ronnrein,test
 1387649909,Ronnrein,testing igjen
@@ -84,3 +81,11 @@
 1387652663,speedy,nei funker naa maate bare resete nett siden
 1387653099,Quit,Ronnrein quit
 1387653267,Join,Ronnrein joined
+1387654209,WEB::johved,test
+1387654216,Ronnrein,Yos
+1387654218,Ronnrein,ingame jeg
+1387654226,WEB::johved,lol :P
+1387654265,WEB::johved,sweet
+1387654280,Ronnrein,yy
+1387654290,Ronnrein,koden ligger paa githuben min
+1387654293,Ronnrein,Ronnrein

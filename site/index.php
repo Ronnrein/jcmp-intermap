@@ -3,16 +3,37 @@
 <head>
 	<title>Intermap</title>
 	<style type="text/css">
+		body{
+			background-image:url("bg.png");
+			color:#FFF;
+		}
 		#canvas{
 			background-image:url("map.jpg");
 		}
 		#chat{
 			height:700px;
 			border:1px solid;
+			font-family:"Lucida Console";
+			font-size:12px;
+			background-color:#000;
+			color:#FFF;
+			padding:5px;
 		}
 		#chat p{
 			margin:0px;
 			padding:0px;
+		}
+		#chat .name{
+			color:#0F978C;
+		}
+		#chat .join{
+			color:#07BF00;
+		}
+		#chat .quit{
+			color:#ff001d;
+		}
+		#chat .time{
+			color:#3041ff;
 		}
 	</style>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -97,7 +118,15 @@
 			});
 
 			function renderChat(time, name, msg){
-				$("#chat").append("<p>"+name+": "+msg+"</p>");
+				if(name == "Join"){
+					$("#chat").append("<p><span class='time'>"+time+"</span> <span class='join'>"+msg+"</span></p>");
+				}
+				else if(name == "Quit"){
+					$("#chat").append("<p><span class='time'>"+time+"</span> <span class='quit'>"+msg+"</span></p>");
+				}
+				else{
+					$("#chat").append("<p><span class='time'>"+time+"</span> <span class='name'>"+name+":</span> <span class='msg'>"+msg+"</span></p>");
+				}
 			}
 
 			function convertCoord(coord){

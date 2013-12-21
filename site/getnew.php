@@ -35,12 +35,13 @@ else{
 }
 
 $file = file($pathChat);
-for($i = count($file)-36; $i < count($file); $i++){
+for($i = count($file)-58; $i < count($file); $i++){
 	$line = $file[$i];
 	$line = str_replace("\r\n","",$line);
 	if(!empty($line)){
 		$exp = explode(",", $line);
-		$array["chat"][] = array("time" => $exp[0], "name" => $exp[1], "msg" => $exp[2]);
+		$time = date("H:i", $exp[0]);
+		$array["chat"][] = array("time" => $time, "name" => $exp[1], "msg" => $exp[2]);
 	}
 }
 
