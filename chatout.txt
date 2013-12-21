@@ -1,0 +1,47 @@
+1387646438,Ronnrein,testing
+1387647562,Ronnrein,testing
+1387647596,Ronnrein,test test
+1387647649,Ronnrein,test test test
+1387648200,Ronnrein,gjor meg en tjeneste
+1387648203,Ronnrein,spam chatten
+1387648212,Ronnrein,sann 20 chat messages eller noe
+1387648321,Ronnrein,bla
+1387648323,Ronnrein,blabla
+1387648324,Ronnrein,blablabla
+1387648327,Ronnrein,blablablabla
+1387648329,Ronnrein,blablabla
+1387648331,Ronnrein,blabla
+1387648332,Ronnrein,bla
+1387648410,speedy,t
+1387648412,speedy,t
+1387648413,speedy,t
+1387648414,speedy,t
+1387648417,speedy,tt
+1387648418,speedy,t
+1387648419,speedy,t
+1387648419,speedy,t
+1387648420,speedy,t
+1387648421,speedy,t
+1387648423,speedy,tt
+1387648425,speedy,tt
+1387648425,speedy,tt
+1387648426,speedy,t
+1387648427,speedy,tt
+1387648428,speedy,tt
+1387648430,speedy,tt
+1387648437,Ronnrein,takker
+1387648532,speedy,bb
+1387648737,Ronnrein,spam
+1387648738,Ronnrein,spam
+1387648739,Ronnrein,spam
+1387648740,Ronnrein,spam
+1387648742,Ronnrein,est
+
+1387649627,speedy,hva er det test greiane for
+1387649643,Ronnrein,du faar se snart
+1387649820,Ronnrein,test
+1387649909,Ronnrein,testing igjen
+1387649915,Ronnrein,testing
+1387649942,WEB::Ronnrein,testing igjen
+1387649956,Ronnrein,saann
+1387650489,WEB::Ronnrein,testtest
