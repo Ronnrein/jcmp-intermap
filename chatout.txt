@@ -45,3 +45,42 @@
 1387649942,WEB::Ronnrein,testing igjen
 1387649956,Ronnrein,saann
 1387650489,WEB::Ronnrein,testtest
+1387652186,speedy,hva er nytt
+1387652223,WEB::Ronnrein,sjekk http://jcmp.ronnrein.com/intermap/
+1387652315,WEB::Ronnrein,spam
+1387652316,WEB::Ronnrein,spam
+1387652317,WEB::Ronnrein,spam
+1387652319,WEB::Ronnrein,spam
+1387652320,speedy,t
+1387652320,WEB::Ronnrein,spam
+1387652321,speedy,t
+1387652322,speedy,t
+1387652322,WEB::Ronnrein,spam
+1387652322,speedy,t
+1387652323,WEB::Ronnrein,spam
+1387652323,speedy,tt
+1387652324,speedy,ttt
+1387652324,WEB::Ronnrein,spam
+1387652325,speedy,ttt
+1387652325,WEB::Ronnrein,spam
+1387652326,speedy,ttt
+1387652326,WEB::Ronnrein,spam
+1387652327,speedy,ttt
+1387652327,WEB::Ronnrein,spam
+1387652328,WEB::Ronnrein,spam
+1387652328,speedy,ttt
+1387652329,WEB::Ronnrein,spam
+1387652329,speedy,tt
+1387652330,WEB::Ronnrein,spam
+1387652331,WEB::Ronnrein,spam
+1387652332,WEB::Ronnrein,spam
+1387652333,WEB::Ronnrein,spam
+1387652334,WEB::Ronnrein,spam
+1387652335,WEB::Ronnrein,spam
+1387652339,speedy,ser chaten
+1387652580,speedy,litt buget
+1387652597,WEB::Ronnrein,Hvordan da?
+1387652600,speedy,boga
+1387652663,speedy,nei funker naa maate bare resete nett siden
+1387653099,Quit,Ronnrein quit
+1387653267,Join,Ronnrein joined

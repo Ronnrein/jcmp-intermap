@@ -4,6 +4,8 @@ function InteractiveMap:__init()
 
     Events:Subscribe("PostTick", self, self.PostTick)
     Events:Subscribe("PlayerChat", self, self.PlayerChat)
+    Events:Subscribe("PlayerJoin", self, self.PlayerJoin)
+    Events:Subscribe("PlayerQuit", self, self.PlayerQuit)
 end
 
 function InteractiveMap:PostTick(args)
@@ -20,6 +22,20 @@ function InteractiveMap:PlayerChat(args)
         file:write(out)
         file:close()
     end
+end
+
+function InteractiveMap:PlayerJoin(args)
+    file = io.open("chatout.txt", "a")
+    out = "\n"..os.time()..",Join,"..args.player:GetName().." joined"
+    file:write(out)
+    file:close()
+end
+
+function InteractiveMap:PlayerQuit(args)
+    file = io.open("chatout.txt", "a")
+    out = "\n"..os.time()..",Quit,"..args.player:GetName().." quit"
+    file:write(out)
+    file:close()
 end
 
 function InteractiveMap:WritePositions()
